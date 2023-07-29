@@ -1,11 +1,14 @@
 import { Injectable } from '@nestjs/common';
+import { ChoiceRepository } from './choice.repository';
 import { CreateChoiceDto } from './dto/create-choice.dto';
 import { UpdateChoiceDto } from './dto/update-choice.dto';
 
 @Injectable()
 export class ChoiceService {
-  create(createChoiceDto: CreateChoiceDto) {
-    return 'This action adds a new choice';
+  constructor(private readonly choiceRepository: ChoiceRepository) {}
+  async create(createChoiceDto: CreateChoiceDto) {
+    const result = await this.choiceRepository.create(createChoiceDto);
+    return result;
   }
 
   findAll() {

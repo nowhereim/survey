@@ -1,15 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import { CreateReplyDto } from './dto/create-reply.dto';
 import { UpdateReplyDto } from './dto/update-reply.dto';
+import { ReplyRepository } from './reply.repository';
 
 @Injectable()
 export class ReplyService {
-  create(createReplyDto: CreateReplyDto) {
-    return 'This action adds a new reply';
+  constructor(private readonly replyRepository: ReplyRepository) {}
+  async create(createReplyDto: CreateReplyDto) {
+    const result = await this.replyRepository.create(createReplyDto);
+    return result;
   }
 
-  findAll() {
-    return `This action returns all reply`;
+  async findAll() {
+    const result = await this.replyRepository.findAll();
+    return result;
   }
 
   findOne(id: number) {

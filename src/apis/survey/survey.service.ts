@@ -1,11 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSurveyDto } from './dto/create-survey.dto';
 import { UpdateSurveyDto } from './dto/update-survey.dto';
+import { SurveyRpository } from './survey.repository';
 
 @Injectable()
 export class SurveyService {
-  create(createSurveyDto: CreateSurveyDto) {
-    return 'This action adds a new survey';
+  constructor(private readonly surveyRepository: SurveyRpository) {}
+  async create(createSurveyDto: CreateSurveyDto) {
+    const result = await this.surveyRepository.create(createSurveyDto);
+    return result;
   }
 
   findAll() {

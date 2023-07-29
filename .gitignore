@@ -34,3 +34,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 test
+config
+README.md
+packge-lock.json
+logger
+config
+.env
+common

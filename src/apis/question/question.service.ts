@@ -1,11 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
+import { QuestionRepository } from './question..repository';
 
 @Injectable()
 export class QuestionService {
-  create(createQuestionDto: CreateQuestionDto) {
-    return 'This action adds a new question';
+  constructor(private readonly questionRepository: QuestionRepository) {}
+
+  async create(createQuestionDto: CreateQuestionDto) {
+    const result = await this.questionRepository.create(createQuestionDto);
+    return result;
   }
 
   findAll() {
