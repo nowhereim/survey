@@ -36,8 +36,8 @@ lerna-debug.log*
 test
 config
 README.md
-packge-lock.json
 logger
 config
 .env
 common
+package-lock.json
