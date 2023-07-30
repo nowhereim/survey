@@ -1,4 +1,88 @@
-### 작업중..
+
+
+### 설문응답 전체조회 응답값 예시
+```javascript
+[
+    {
+        "name": "김호리",
+        "surveyName": "여름휴가 설문조사 ",
+        "surveyDescription": "여행상품 잠재고객 분석",
+        "response": [
+            {
+                "question": "1.당신은 여름휴가를 갈 예정인가요?",
+                "choice": "그렇다",
+                "score": 3
+            },
+            {
+                "question": "2.당신은 매년 여름휴가를 가는편인가요?",
+                "choice": "가긴하지만 매년 가지는 않는다.",
+                "score": 2
+            },
+            {
+                "question": "3.여름휴가를 간다면 주로 어디로 가시나요?",
+                "choice": "해외",
+                "score": 2
+            },
+            {
+                "question": "4.여름휴가는 누구와 함께 가는편인가요?",
+                "choice": "친구",
+                "score": 2
+            },
+            {
+                "question": "5.경비는 얼마정도를 가져가시나요?",
+                "choice": "50만원 이상 100만원 이하",
+                "score": 2
+            },
+            {
+                "question": "6.여름휴가를 떠날때 이동수단은 어떤걸 이용하시는 편인가요?",
+                "choice": "렌트카",
+                "score": 3
+            }
+        ],
+        "totalScore": 14
+    },
+    {
+        "name": "이사라",
+        "surveyName": "여름휴가 설문조사 ",
+        "surveyDescription": "여행상품 잠재고객 분석",
+        "response": [
+            {
+                "question": "1.당신은 여름휴가를 갈 예정인가요?",
+                "choice": "그렇다",
+                "score": 3
+            },
+            {
+                "question": "2.당신은 매년 여름휴가를 가는편인가요?",
+                "choice": "가긴하지만 매년 가지는 않는다.",
+                "score": 2
+            },
+            {
+                "question": "3.여름휴가를 간다면 주로 어디로 가시나요?",
+                "choice": "국내",
+                "score": 1
+            },
+            {
+                "question": "4.여름휴가는 누구와 함께 가는편인가요?",
+                "choice": "혼자",
+                "score": 1
+            },
+            {
+                "question": "5.경비는 얼마정도를 가져가시나요?",
+                "choice": "50만원 미만",
+                "score": 1
+            },
+            {
+                "question": "6.여름휴가를 떠날때 이동수단은 어떤걸 이용하시는 편인가요?",
+                "choice": "대중교통",
+                "score": 1
+            }
+        ],
+        "totalScore": 9
+    }
+]
+```
+## ERD (설문이외 테이블 생략)
+![설문 (5)](https://github.com/nowhereim/survey/assets/113084907/099613e1-9bd7-4148-81dd-abf67e23c700)
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
@@ -29,3 +113,4 @@
 [기존 설문조사 모델 개선](https://github.com/nowhereim/Nest.js-Survey)
 
 framework TypeScript starter repository.
+
